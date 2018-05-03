@@ -49,6 +49,26 @@ ui <- fluidPage(
   # Title
   titlePanel("What are People Eating in the U.S.?"),
   
+  h5("Stat 41 Group 8 presents the app: 'What are 
+     People Eating in the U.S.?'. Our Shiny application 
+     demonstrates what types of food people from different 
+     demographics are eating. Change the year and type of 
+     demographic using the inputs in the sidebar and notice how 
+     the plot reacts. Then select the catagories you would like 
+     to compare using the checkbox input. For our second graph, 
+     use the slider to examine how the diet of the U.S population 
+     has changed over the years. Finally, type which food groups 
+     you would like to compare into the search bar. 
+     For more information on the data, see the full datasets - 
+     which are also interactive - under tabs 'Plot One Data' and
+     'Plot Two Data'. See the link below for our code. Enjoy!
+     "),
+  tags$a(href="https://github.com/clevitt1/What-are-People-Eating-in-the-US-Code/blob/master/APP/app.R", 
+         "App Code"),
+  
+  br(),
+  br(),
+  
   # Generate row with sidebar
   sidebarLayout(
     
@@ -149,7 +169,7 @@ ui <- fluidPage(
                           tabPanel("Plot Two Data", tableOutput("table2")))
     )
   )
-)
+  )
 
 ##### Server Side #####
 server <- function(input, output){
